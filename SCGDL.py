@@ -11,7 +11,6 @@ from torch_geometric.nn import ResGatedGraphConv
 class ResGatedGraphmodel(torch.nn.Module):
     def __init__(self, hidden_dims):
         super(ResGatedGraphmodel, self).__init__()
-
         
         [in_channels, num_hidden, out_channels] = hidden_dims #3000 128 128 
         self.conv1 = ResGatedGraphConv(in_channels, num_hidden) 
@@ -32,4 +31,4 @@ class ResGatedGraphmodel(torch.nn.Module):
         h3 = Activation_f(self.conv3(h2,edge_index))
         h4 = self.conv4(h3,edge_index)
         h4 = self.eLU(h4)
-        return h4 
+        return h4
