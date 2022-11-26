@@ -41,7 +41,7 @@ def SCGDL_Train(adata,
     n_epochs:Number of total epochs for training.
     lr: Learning rate for AdamOptimizer.
     key_added: The latent embeddings are saved in adata.obsm[key_added].
-    gradient_clipping: Gradient Clipping. 梯度截断
+    gradient_clipping: Gradient Clipping.
     weight_decay: Weight decay for AdamOptimizer.
     save_loss: If True, the training loss is saved in adata.uns['SCGDL_loss'].
     save_reconst_exp: If True, the reconstructed expression profiles are saved in adata.layers['SCGDL_ReX'].
