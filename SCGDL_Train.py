@@ -59,7 +59,6 @@ def SCGDL_Train(adata,
     np.random.seed(seed)
 
     adata.X = sp.csr_matrix(adata.X)
-
     if "Spatial_highly_variable_genes" in adata.var.columns:
         adata_Vars =  adata[:, adata.var['Spatial_highly_variable_genes']]
         print('Input Size using Spatial_variable_genes: ', adata_Vars.shape)
