@@ -134,11 +134,11 @@ def BGMM(adata,n_cluster,used_obsm='SCGDL'):
 
     method = "BayesianGaussianMixture"
     labels = knowledge.predict(adata.obsm[used_obsm])+1
-    Ann_df.columns = [method] # 给dataframe类型的数据 列命名'Spectral clusters'
-    Ann_df.loc[:,method] = labels #先将分类结果标签添加到导入的Ground Truth文件中
-    adata.obs[method] = Ann_df.loc[adata.obs_names, method] ##将分类结果添加到obs中
+    Ann_df.columns = [method] 
+    Ann_df.loc[:,method] = labels 
+    adata.obs[method] = Ann_df.loc[adata.obs_names, method] 
     adata.obs[method] = adata.obs[method].astype('category') 
-    obs_df = adata.obs.dropna() ##过滤掉缺失值的行，即当前分类值为Nan，就把该行过滤掉。
-    ARI = adjusted_rand_score(obs_df[method], obs_df['Ground Truth']) ## ARI 是从 包sklearn.metrics.cluster中导入的衡量标准
+    obs_df = adata.obs.dropna() 
+    ARI = adjusted_rand_score(obs_df[method], obs_df['Ground Truth']) 
     adata.uns["ARI"] = ARI 
     return adata
