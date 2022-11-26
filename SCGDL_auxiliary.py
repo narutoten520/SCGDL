@@ -6,7 +6,6 @@ from sklearn.metrics.cluster import adjusted_rand_score
 import scipy.sparse as sp
 import seaborn as sns
 import matplotlib.pyplot as plt
-
 import torch
 from torch_geometric.data import Data
 
