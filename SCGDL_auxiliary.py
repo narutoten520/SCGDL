@@ -133,11 +133,9 @@ def BGMM(adata,n_cluster,used_obsm='SCGDL'):
 
     method = "BayesianGaussianMixture"
     labels = knowledge.predict(adata.obsm[used_obsm])+1
-    Ann_df.columns = [method] 
-    Ann_df.loc[:,method] = labels 
-    adata.obs[method] = Ann_df.loc[adata.obs_names, method] 
-    adata.obs[method] = adata.obs[method].astype('category') 
-    obs_df = adata.obs.dropna() 
+    adata.obs[method] = adata.obs['Ground Truth']
+    adata.obs[method] = labels 
+    obs_df = adata.obs.dropna()
     ARI = adjusted_rand_score(obs_df[method], obs_df['Ground Truth']) 
     adata.uns["ARI"] = ARI 
     return adata
