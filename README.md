@@ -21,23 +21,15 @@ Finally, the low-dimensional latent embeddings are acquired to imply the spots r
 2. Scanpy
 3. Squidpy
 4. Pytorch_pyG
-5. pandas
-6. numpy
-7. sklearn
-8. seaborn
-9. matplotlib
-10. torch_geometric
+5. matplotlib
+6. torch_geometric
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Example usage
-* Selecting GNNs for spatial clustering task in DGI module
+* Using SCGDL to identify the spatial domains for spatial transcriptome
   ```sh
-    running DGI Example_DLPFC.ipynb to see the simulation results step by step
-  ```
-* Selecting GNNs for spatial clustering task in VGAE module
-  ```sh
-    running VGAE Example_DLPFC.ipynb to see the simulation results step by step
+    running SCGDL_Tutorial.ipynb to see the simulation results step by step
   ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
