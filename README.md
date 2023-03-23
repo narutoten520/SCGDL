@@ -1,6 +1,6 @@
 
 # SCGDL
-![](https://github.com/narutoten520/GRAPHDeep/blob/753f8d6b4cc912bbd250eda3494731a02f8cda0d/Figure%201.png)
+![](https://github.com/narutoten520/SCGDL/blob/b839861ed8eb84e0d7de892d82fb07b7818301cd/Figure%201-updated.png)
 Spatial Clustering for Spatial Omics Data via Geometric Deep Learning
 ------
 The proposed SCGDL owns a two-levels architecture, as shown in Figure 1. 
